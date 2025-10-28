@@ -1,0 +1,20 @@
+---
+// src/pages/admin/mensajes.astro
+import Layout from '../../layouts/Layout.astro';
+import AdminMessages from '../../components/AdminMessages.vue';
+
+// No indexar: Evita que Google vea el área de administración. ¡Senior Move!
+// Esto debe ir acompañado de protección con contraseña en el Backend.
+const pageTitle = "Dashboard de Administración | Mensajes";
+---
+<meta name="robots" content="noindex, nofollow" />
+<Layout 
+    title={pageTitle} 
+    description="Panel de administración interno para Horizon Metrics."
+>
+    <main class="min-h-screen py-16 bg-gray-900 text-white font-sans">
+        
+        <AdminMessages client:load /> 
+
+    </main>
+</Layout>

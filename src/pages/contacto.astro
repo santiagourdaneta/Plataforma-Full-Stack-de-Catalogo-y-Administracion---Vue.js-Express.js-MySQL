@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactoForm from '../components/ContactoForm.vue';
+
+const pageTitle = "Contacto";
+---
+
+<Layout title={pageTitle}>
+    <main class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold mb-6 text-center">Contáctanos</h1>
+        <p class="text-center text-gray-600 mb-8">Envíanos un mensaje y te responderemos a la brevedad posible.</p>
+        
+        <ContactoForm client:load /> 
+    </main>
+</Layout>

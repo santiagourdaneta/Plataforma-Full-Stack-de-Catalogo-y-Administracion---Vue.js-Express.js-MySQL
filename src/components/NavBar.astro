@@ -1,0 +1,28 @@
+---
+// src/components/NavBar.astro
+import AuthLink from './AuthLink.vue'; 
+const navItems = [
+    { title: 'Inicio', href: '/' },
+    { title: 'Contacto', href: '/contacto' }, 
+    { title: 'Búsqueda Dinámica', href: '/busqueda' }, 
+    { title: 'Login Admin', href: '/login' } 
+];
+---
+<header class="bg-gray-900 shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-teal-400 hover:text-teal-300">
+            Horizon Metrics
+        </a>
+        <div class="flex space-x-4">
+            {navItems.map((item) => (
+                <a 
+                    href={item.href} 
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                    {item.title}
+                </a>
+            ))}
+            <AuthLink client:load />
+        </div>
+    </nav>
+</header>

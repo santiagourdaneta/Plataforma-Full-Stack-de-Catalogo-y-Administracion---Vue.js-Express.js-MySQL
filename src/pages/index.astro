@@ -1,0 +1,13 @@
+---
+// src/pages/index.astro
+
+// En Astro, puedes manipular la respuesta HTTP directamente en el Frontmatter.
+// Establecemos el encabezado de ubicación (Location) para redirigir
+// y el estado (status) a 302 (Found) para indicar una redirección temporal.
+
+const loginPath = '/login';
+
+return Astro.redirect(loginPath, 302);
+
+// Nota: También puedes usar Astro.redirect('/login'); que usa 302 por defecto.
+---

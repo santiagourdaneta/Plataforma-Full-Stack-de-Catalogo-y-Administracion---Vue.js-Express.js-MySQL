@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    /* Tipado y M�dulos */
+    "target": "ES2020",
+    "module": "CommonJS",                  /* Usa CommonJS para compatibilidad con 'require' de Node.js */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                        /* Activa todas las reglas estrictas de tipado */
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    
+    /* Configuraci�n de Node.js */
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "moduleResolution": "node", // Asegura la correcta resolución de módulos
+    "esModuleInterop": true,   // Esencial para manejar bien import/require
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,            // Buenas prácticas
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node", "jest"], 
+  }, 
+    "include": ["src/**/*", "__tests__/**/*"] // Asegura que las carpetas de prueba se incluyan              
+  }
+
+

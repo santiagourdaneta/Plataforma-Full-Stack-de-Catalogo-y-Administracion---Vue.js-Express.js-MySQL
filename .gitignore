@@ -1,0 +1,29 @@
+# Dependencies
+/node_modules
+/dist
+/build
+/back/node_modules
+
+# IDE
+.vscode
+.idea
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database/Migration files (if any are auto-generated)
+*.sqlite
+*.sql
+
+# TypeScript/JavaScript compiled files
+# (Asegúrate de que tu compilador no los use, si usas ts-node ignora esto)
+# /ts-compiled
+# *.js.map

@@ -1,0 +1,64 @@
+---
+import AuthLink from './AuthLink.vue'; // Necesitas este componente para el enlace de Admin
+// Importa el componente de Login/Logout si lo tienes
+---
+
+<header class="bg-indigo-600 shadow">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            
+            <div class="flex items-center">
+                <a href="/" class="text-white text-xl font-bold">El Guardián Secreto</a>
+            </div>
+            
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="/busqueda" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium">Búsqueda</a>
+                    <a href="/contacto" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                    <AuthLink client:load /> 
+                </div>
+            </div>
+
+            <div class="md:hidden">
+                <button 
+                    id="menu-button" 
+                    type="button" 
+                    class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-yellow-400 focus:outline-none"
+                    aria-controls="mobile-menu" 
+                    aria-expanded="false"
+                >
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="/busqueda" class="text-white block hover:bg-indigo-700 px-3 py-2 rounded-md text-base font-medium">Búsqueda</a>
+            <a href="/contacto" class="text-white block hover:bg-indigo-700 px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+            <a href="/login" class="text-white block hover:bg-indigo-700 px-3 py-2 rounded-md text-base font-medium">Login</a>
+            
+            <div>
+                <AuthLink client:load />
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.getElementById('menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        if (button && menu) {
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true' || false;
+                button.setAttribute('aria-expanded', String(!isExpanded));
+                menu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>

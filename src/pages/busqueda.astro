@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SearchComponent from '../components/SearchComponent.vue';
+
+const pageTitle = "Búsqueda de Juguetes";
+---
+
+<Layout title={pageTitle}>
+    <main class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold mb-6 text-center">Encuentra tu Juguete Ideal</h1>
+ 
+        <SearchComponent client:load />
+        
+    </main>
+</Layout>

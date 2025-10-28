@@ -1,0 +1,27 @@
+{
+  "name": "horizon-metrics",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^5.1.1",
+    "@tailwindcss/vite": "^4.1.14",
+    "astro": "^5.14.5",
+    "lodash-es": "^4.17.21",
+    "pinia": "^3.0.3",
+    "tailwindcss": "^4.1.14",
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.1",
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
+  }
+}
